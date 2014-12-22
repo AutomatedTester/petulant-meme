@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<h1>Petulant Meme</h1>
+<p>Storing a list of gifs couldn't be easier</p>
+{% if urls %}
+    <img src='{{ urls.urls}}'>
+{% else %}
+    <p>Dude, you need to store gifs</p>
+{% endif %}
