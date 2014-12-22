@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<h1>Petulant Meme</h1>
-<p>Storing a list of gifs couldn't be easier</p>
-{% if urls %}
-    <img src='{{ urls.urls}}'>
-{% else %}
-    <p>Dude, you need to store gifs</p>
-{% endif %}
+<link rel="stylesheet" type="text/css" href="static/meme.css">
+<div class='container'>
+    <h1>Petulant Meme</h1>
+    <p>Storing a list of gifs couldn't be easier</p>
+    {% if urls %}
+        <img src='{{ urls.urls}}'>
+    {% else %}
+        <p>Dude, you need to store gifs</p>
+    {% endif %}
+</div>
