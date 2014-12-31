@@ -3,9 +3,18 @@
 <div class='container'>
     <h1>Petulant Meme</h1>
     <p>Storing a list of gifs couldn't be easier</p>
-    {% if urls %}
-        <img src='{{ urls.urls}}'>
-    {% else %}
-        <p>Dude, you need to store gifs</p>
-    {% endif %}
+    <form id='submitForm' class='notDisplayed'>
+        {% csrf_token %}
+        {{ form }}
+        <button id='submit'>Submit</button>
+    </form>
+    <p>Dude, you need to store gifs.</p>
+    <button id='addSome'>Add Some!</button>
+    {% for url in urls %}
+        <img src='{{ url.urls}}'>
+    {% endfor %}
+
+
 </div>
+<script type="text/javascript" src='static/meme.js'></script>
+

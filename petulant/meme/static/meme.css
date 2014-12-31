@@ -1,8 +1,20 @@
 body {
     background-color: #abb;
 }
+button {
+    margin: 10px;
+    padding: 10px;
+}
 
 .container {
     margin: auto;
     width: 1024px;
+}
+
+.notDisplayed {
+    display: none;
+}
+
+.isShown {
+    display:block;
 }
