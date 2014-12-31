@@ -1,13 +1,12 @@
 import json
 
-from django.shortcuts import render
+from django import forms
 from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render
+
 from models import Urls, Keywords, Lookup
 
-from django import forms
 
-# Create your views here.
 def index(request):
     if not request.POST:
         all_urls = Urls.objects.all()
