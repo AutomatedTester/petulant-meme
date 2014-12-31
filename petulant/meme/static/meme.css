@@ -11,6 +11,10 @@ button {
     width: 1024px;
 }
 
+.main {
+    width: 100%;
+}
+
 .notDisplayed {
     display: none;
 }

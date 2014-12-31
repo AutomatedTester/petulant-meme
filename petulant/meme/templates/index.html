@@ -3,15 +3,17 @@
 <div class='container'>
     <h1>Petulant Meme</h1>
     <p>Storing a list of gifs couldn't be easier</p>
-    <form id='submitForm' class='notDisplayed'>
-        {% csrf_token %}
-        {{ form }}
-        <button id='submit'>Submit</button>
-    </form>
-    <p>Dude, you need to store gifs.</p>
-    <button id='addSome'>Add Some!</button>
+    <div class='main'>
+        <form id='submitForm' class='notDisplayed'>
+            {% csrf_token %}
+            {{ form }}
+            <button id='submit'>Submit</button>
+        </form>
+        <p>Dude, you need to store gifs.</p>
+        <button id='addSome'>Add Some!</button>
+    </div>
     {% for url in urls %}
-        <img src='{{ url.urls}}'>
+        <div style='float: left;'><img src='{{ url.urls}}'></div>
     {% endfor %}
 
 
