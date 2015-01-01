@@ -12,9 +12,11 @@
         <p>Dude, you need to store gifs.</p>
         <button id='addSome'>Add Some!</button>
     </div>
+    <div id='gifContainer'>
     {% for url in urls %}
-        <div style='float: left;'><img src='{{ url.urls}}'></div>
+        <div class='gifs'><img src='{{ url.urls}}'></div>
     {% endfor %}
+    </div>
 
 
 </div>

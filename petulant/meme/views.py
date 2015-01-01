@@ -24,7 +24,7 @@ def index(request):
                 key = Keywords(keywords=keyz)
                 key.save()
                 lookup = Lookup(keywords=key, urls=url)
-            return HttpResponse(json.dumps({"success": True}))
+            return HttpResponse(json.dumps({"success": True, "url": formurl}))
         else:
             return HttpResponse(json.dumps({"error": "Invalid form post"}))
 

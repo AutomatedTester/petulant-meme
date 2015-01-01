@@ -17,7 +17,19 @@ submitForm.addEventListener('click', function(e) {
 
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
-            //add it to the page
+            var data = JSON.parse(request.responseText);
+            if (data.success) {
+                var gifContainer = document.getElementById('gifContainer');
+                var gifs = document.querySelectorAll('.gifs');
+                var newDiv = document.createElement('div');
+                var img = document.createElement('img');
+                newDiv.classList.add('gifs');
+                img.setAttribute('src', data.url);
+                newDiv.appendChild(img);
+                gifContainer.insertBefore(newDiv, gifs[gifs.length - 1].nextSibling);
+            } else {
+
+            }
         }
     }
     request.send(new FormData(form));
