@@ -27,6 +27,12 @@ submitForm.addEventListener('click', function(e) {
                 img.setAttribute('src', data.url);
                 newDiv.appendChild(img);
                 gifContainer.insertBefore(newDiv, gifs[gifs.length - 1].nextSibling);
+
+                // clear fields
+                var idURL = document.getElementById('id_url');
+                idURL.value = '';
+                var idKeywods = document.getElementById('id_keywords');
+                idKeywods.value = '';
             } else {
 
             }
