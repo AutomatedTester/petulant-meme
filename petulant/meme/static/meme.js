@@ -1,3 +1,5 @@
+'use strict';
+
 var addSome = document.getElementById('addSome');
 
 addSome.addEventListener('click', function(e){
