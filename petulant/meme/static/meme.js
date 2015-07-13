@@ -39,7 +39,7 @@ submitForm.addEventListener("click", function(e) {
 
             }
         }
-    }
+    };
     request.send(new FormData(form));
     e.preventDefault();
 });
