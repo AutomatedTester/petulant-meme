@@ -2,7 +2,7 @@
 
 var addSome = document.getElementById("addSome");
 
-addSome.addEventListener("click", function(e){
+addSome.addEventListener("click", function() {
     var submitForm = document.getElementById("submitForm");
     submitForm.classList.remove("notDisplayed");
     submitForm.classList.add("isShown");
